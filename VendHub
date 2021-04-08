@@ -1,0 +1,275 @@
+-- made by fortnitespeler2008
+-- youtube: Exploiting Vending Machine
+-- tiktok: anime.vs.trashcandamelio
+-- have fun with this script and ill update it soon as possible the next game coming is jailbreak! stay up to date by following on tiktok and youtube to know when new ame scripts come out!
+
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Exploit = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Games = Instance.new("TextLabel")
+local RagdollEngine = Instance.new("TextButton")
+local Updates = Instance.new("TextLabel")
+local RagdollEngine_2 = Instance.new("Frame")
+local TitleRagdoll = Instance.new("TextLabel")
+local AntiRagdoll = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local noclip = Instance.new("TextButton")
+local SuperSpeed = Instance.new("TextButton")
+local superJump = Instance.new("TextButton")
+
+--Properties:
+
+Exploit.Name = "Exploit"
+Exploit.Parent = game.CoreGui
+Exploit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Exploit
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.Position = UDim2.new(0.0202020202, 0, 0.580928504, 0)
+MainFrame.Size = UDim2.new(0, 450, 0, 300)
+MainFrame.Draggable = true
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Title.Size = UDim2.new(0, 450, 0, 50)
+Title.Font = Enum.Font.PermanentMarker
+Title.Text = "VendHub"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Games.Name = "Games"
+Games.Parent = MainFrame
+Games.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Games.Position = UDim2.new(0, 0, 0.203333333, 0)
+Games.Size = UDim2.new(0, 450, 0, 33)
+Games.Font = Enum.Font.PermanentMarker
+Games.Text = "games"
+Games.TextColor3 = Color3.fromRGB(0, 0, 0)
+Games.TextScaled = true
+Games.TextSize = 14.000
+Games.TextWrapped = true
+
+RagdollEngine.Name = "RagdollEngine"
+RagdollEngine.Parent = MainFrame
+RagdollEngine.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+RagdollEngine.Position = UDim2.new(0, 0, 0.386666656, 0)
+RagdollEngine.Size = UDim2.new(0, 86, 0, 50)
+RagdollEngine.Font = Enum.Font.PermanentMarker
+RagdollEngine.Text = "Ragdoll Engine"
+RagdollEngine.TextColor3 = Color3.fromRGB(0, 0, 0)
+RagdollEngine.TextScaled = true
+RagdollEngine.TextSize = 14.000
+RagdollEngine.TextWrapped = true
+RagdollEngine.MouseButton1Down:connect(function()
+	RagdollEngine_2.Visible = true
+end)
+
+Updates.Name = "Updates"
+Updates.Parent = MainFrame
+Updates.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Updates.Position = UDim2.new(0.277777791, 0, 0.626666665, 0)
+Updates.Size = UDim2.new(0, 200, 0, 50)
+Updates.Font = Enum.Font.PermanentMarker
+Updates.Text = "more games coming soon"
+Updates.TextColor3 = Color3.fromRGB(0, 0, 0)
+Updates.TextScaled = true
+Updates.TextSize = 14.000
+Updates.TextWrapped = true
+
+RagdollEngine_2.Name = "RagdollEngine"
+RagdollEngine_2.Parent = Exploit
+RagdollEngine_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RagdollEngine_2.Position = UDim2.new(0.643356621, 0, 0.55708909, 0)
+RagdollEngine_2.Size = UDim2.new(0, 399, 0, 222)
+RagdollEngine_2.Visible = false
+RagdollEngine_2.Draggable = true
+
+TitleRagdoll.Name = "TitleRagdoll"
+TitleRagdoll.Parent = RagdollEngine_2
+TitleRagdoll.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TitleRagdoll.Size = UDim2.new(0, 399, 0, 34)
+TitleRagdoll.Font = Enum.Font.PermanentMarker
+TitleRagdoll.Text = "ragdoll engine"
+TitleRagdoll.TextColor3 = Color3.fromRGB(0, 0, 0)
+TitleRagdoll.TextScaled = true
+TitleRagdoll.TextSize = 14.000
+TitleRagdoll.TextWrapped = true
+
+AntiRagdoll.Name = "AntiRagdoll"
+AntiRagdoll.Parent = RagdollEngine_2
+AntiRagdoll.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+AntiRagdoll.Position = UDim2.new(0, 0, 0.238738745, 0)
+AntiRagdoll.Size = UDim2.new(0, 94, 0, 38)
+AntiRagdoll.Font = Enum.Font.PermanentMarker
+AntiRagdoll.Text = "Anti Ragdoll"
+AntiRagdoll.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiRagdoll.TextSize = 14.000
+AntiRagdoll.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character["Local Ragdoll"]:Destroy()
+end)
+
+Close.Name = "Close"
+Close.Parent = RagdollEngine_2
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.834586442, 0, 0.77477479, 0)
+Close.Size = UDim2.new(0, 66, 0, 50)
+Close.Font = Enum.Font.GothamBlack
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Down:connect(function()
+	RagdollEngine_2.Visible = false
+end)
+
+fly.Name = "fly"
+fly.Parent = RagdollEngine_2
+fly.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+fly.Position = UDim2.new(0.248120308, 0, 0.238738745, 0)
+fly.Size = UDim2.new(0, 118, 0, 38)
+fly.Font = Enum.Font.PermanentMarker
+fly.Text = "fly"
+fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+fly.TextScaled = true
+fly.TextSize = 14.000
+fly.TextWrapped = true
+fly.MouseButton1Down:connect(function()
+	repeat wait()
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer
+	local torso = plr.Character.Torso
+	local flying = true
+	local deb = true
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+	local maxspeed = 50
+	local speed = 0
+
+	function Fly()
+		local bg = Instance.new("BodyGyro", torso)
+		bg.P = 9e4
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.cframe = torso.CFrame
+		local bv = Instance.new("BodyVelocity", torso)
+		bv.velocity = Vector3.new(0,0.1,0)
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		repeat wait()
+			plr.Character.Humanoid.PlatformStand = true
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = speed+.5+(speed/maxspeed)
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+				speed = speed-1
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0.1,0)
+			end
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+		until not flying
+		ctrl = {f = 0, b = 0, l = 0, r = 0}
+		lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		speed = 0
+		bg:Destroy()
+		bv:Destroy()
+		plr.Character.Humanoid.PlatformStand = false
+	end
+	mouse.KeyDown:connect(function(key)
+		if key:lower() == "e" then
+			if flying then flying = false
+			else
+				flying = true
+				Fly()
+			end
+		elseif key:lower() == "w" then
+			ctrl.f = 1
+		elseif key:lower() == "s" then
+			ctrl.b = -1
+		elseif key:lower() == "a" then
+			ctrl.l = -1
+		elseif key:lower() == "d" then
+			ctrl.r = 1
+		end
+	end)
+	mouse.KeyUp:connect(function(key)
+		if key:lower() == "w" then
+			ctrl.f = 0
+		elseif key:lower() == "s" then
+			ctrl.b = 0
+		elseif key:lower() == "a" then
+			ctrl.l = 0
+		elseif key:lower() == "d" then
+			ctrl.r = 0
+		end
+	end)
+	Fly()
+end)
+
+noclip.Name = "noclip"
+noclip.Parent = RagdollEngine_2
+noclip.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+noclip.Position = UDim2.new(0.566416085, 0, 0.238738745, 0)
+noclip.Size = UDim2.new(0, 118, 0, 38)
+noclip.Font = Enum.Font.PermanentMarker
+noclip.Text = "noclip"
+noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+noclip.TextScaled = true
+noclip.TextSize = 14.000
+noclip.TextWrapped = true
+noclip.MouseButton1Down:connect(function()
+	game:GetService("RunService").Stepped:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+	end)
+end)
+
+SuperSpeed.Name = "SuperSpeed"
+SuperSpeed.Parent = RagdollEngine_2
+SuperSpeed.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SuperSpeed.Position = UDim2.new(0, 0, 0.436936945, 0)
+SuperSpeed.Size = UDim2.new(0, 94, 0, 38)
+SuperSpeed.Font = Enum.Font.PermanentMarker
+SuperSpeed.Text = "super speed"
+SuperSpeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+SuperSpeed.TextSize = 14.000
+SuperSpeed.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end)
+
+superJump.Name = "superJump"
+superJump.Parent = RagdollEngine_2
+superJump.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+superJump.Position = UDim2.new(0.248120308, 0, 0.436936945, 0)
+superJump.Size = UDim2.new(0, 118, 0, 38)
+superJump.Font = Enum.Font.PermanentMarker
+superJump.Text = "super jump"
+superJump.TextColor3 = Color3.fromRGB(0, 0, 0)
+superJump.TextScaled = true
+superJump.TextSize = 14.000
+superJump.TextWrapped = true
+superJump.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+end)
